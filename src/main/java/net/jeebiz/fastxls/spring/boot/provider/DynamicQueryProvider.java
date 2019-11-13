@@ -13,30 +13,20 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.vindell.fastxls.spring.boot.property;
+package net.jeebiz.fastxls.spring.boot.provider;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
-@ConfigurationProperties(FastxlsValidationProperties.PREFIX)
-@Getter
-@Setter
-@ToString
-public class FastxlsValidationProperties {
-
-	public static final String PREFIX = "spring.imexport.validation";
-
-	/**
-	 * 每次的数据验证中允许创建的线程池最大容量，默认：20
-	 */
-	private int threadMax = 20;
+import java.util.List;
+/**
+ * 动态导出的字段查询接口，用户需要实现此接口
+ */
+public interface DynamicQueryProvider {
 	
 	/**
-	 * 验证xls文件时,单个线程最大处理行,默认 500.
+	 * 给出用户可扩展的导出列对象接口
+	 * @param table_name
+	 * @return
 	 */
-	private int threadBatchSize = 500;
+	public List<Object> getDynamicColumnsList(String table_name);
+	
 	
 }

@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.vindell.fastxls.spring.boot.property;
+package net.jeebiz.fastxls.spring.boot.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -21,36 +21,21 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ConfigurationProperties(FastxlsImportProperties.PREFIX)
+@ConfigurationProperties(FastxlsValidationProperties.PREFIX)
 @Getter
 @Setter
 @ToString
-public class FastxlsImportProperties {
+public class FastxlsValidationProperties {
 
-	public static final String PREFIX = "spring.imexport.import";
+	public static final String PREFIX = "spring.imexport.validation";
 
 	/**
-	 * 是否在存储导入的文件 . 默认 false.
-	 */
-	private boolean store = false;
-	
-	/**
-	 * 是否在存储导入的文件时，文件名称加上前缀字符串  【前缀字符串-文件名.xls】, 默认 false
-	 */
-	private boolean storePrefix = false;
-	
-	/**
-	 * 是否在存储导入的文件时，文件名称加上后缀字符串  【文件名-后缀字符串.xls】, 默认 false
-	 */
-	private boolean storeSuffix = false;
-	
-	/**
-	 * 每次的导入中允许创建的线程池最大容量，默认：20
+	 * 每次的数据验证中允许创建的线程池最大容量，默认：20
 	 */
 	private int threadMax = 20;
 	
 	/**
-	 * 导入xls文件时,单个线程最大处理行,默认 500.
+	 * 验证xls文件时,单个线程最大处理行,默认 500.
 	 */
 	private int threadBatchSize = 500;
 	

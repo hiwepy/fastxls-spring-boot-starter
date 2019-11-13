@@ -13,41 +13,56 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.vindell.fastxls.spring.boot.property;
+package net.jeebiz.fastxls.spring.boot;
 
+import org.apache.commons.lang3.SystemUtils;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-@ConfigurationProperties(FastxlsStoreProperties.PREFIX)
+@ConfigurationProperties(FastxlsPOIProperties.PREFIX)
 @Getter
 @Setter
 @ToString
-public class FastxlsStoreProperties {
+public class FastxlsPOIProperties {
 
-	public static final String PREFIX = "spring.imexport.store";
+	public static final String PREFIX = "spring.fastxls.poi";
+  
+	/**
+	  * 组件支持的实现方式 POI 或者 JXL 
+	  */
+	public enum Support {
+
+		POI {
+			public String toString() {
+				return "poi";
+			}
+		},
+		JXL{
+			public String toString() {
+				return "jxl";
+			}
+		}
+		
+	}
+	
+	/** Whether Enable Imexport. */
+	private boolean enabled = false;
+	/**
+	 * 编码格式 ，默认： UTF-8
+	 */
+	private String encoding = "UTF-8";
 	
 	/**
-	 * Imexport组件使用的根目录  ，默认 ：imexportDir
+	 * 临时目录
 	 */
-	private String dir = "imexportDir";
+	private String tempdir = SystemUtils.getUserDir().getAbsolutePath();
+	
 	/**
-	 * xls 临时文件存储路径 ，默认 ：tmpDir
+	 * 用于导入导出的类包支持 POI或者JXL，默认： POI
 	 */
-	private String tmpdir = "tmpDir";
-	/**
-	 * xls 模板文件存储路径 ，默认 ：templateDir
-	 */
-	private String template = "templateDir";
-	/**
-	 * xls 文件存储时，文件名后的前缀字符串 【前缀字符串-文件名.xls】 ，默认 ：空
-	 */
-	private String prefix = "";
-	/**
-	 * xls 文件存储时，文件名后的后缀字符串 【文件名-后缀字符串.xls】生成方式 ，可选【Date,UUID】，默认 ：UUID
-	 */
-	private Suffix suffix = Suffix.UUID;
+	private Support support = Support.POI;
 	
 }

@@ -1,4 +1,4 @@
-package com.github.vindell.fastxls.spring.boot;
+package net.jeebiz.fastxls.spring.boot;
 
 import org.springframework.beans.BeansException;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -7,10 +7,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Configuration;
 
-import com.github.vindell.fastxls.spring.boot.property.FastxlsExportProperties;
-import com.github.vindell.fastxls.spring.boot.property.FastxlsImportProperties;
-import com.github.vindell.fastxls.spring.boot.property.FastxlsStoreProperties;
-import com.github.vindell.fastxls.spring.boot.property.FastxlsValidationProperties;
+import net.jeebiz.fastxls.spring.boot.property.FastxlsExportProperties;
+import net.jeebiz.fastxls.spring.boot.property.FastxlsImportProperties;
+import net.jeebiz.fastxls.spring.boot.property.FastxlsStoreProperties;
+import net.jeebiz.fastxls.spring.boot.property.FastxlsValidationProperties;
 
 @Configuration
 @ConditionalOnProperty(prefix = FastxlsProperties.PREFIX, value = "enabled", havingValue = "true")

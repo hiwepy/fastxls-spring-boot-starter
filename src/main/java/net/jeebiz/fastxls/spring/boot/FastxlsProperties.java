@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.vindell.fastxls.spring.boot;
+package net.jeebiz.fastxls.spring.boot;
 
 import org.apache.commons.lang3.SystemUtils;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -28,27 +28,9 @@ import lombok.ToString;
 @ToString
 public class FastxlsProperties {
 
-	public static final String PREFIX = "spring.imexport";
+	public static final String PREFIX = "spring.fastxls";
   
-	/**
-	  * 组件支持的实现方式 POI 或者 JXL 
-	  */
-	public enum Support {
-
-		POI {
-			public String toString() {
-				return "poi";
-			}
-		},
-		JXL{
-			public String toString() {
-				return "jxl";
-			}
-		}
-		
-	}
-	
-	/** Whether Enable Imexport. */
+	/** Whether Enable Fastxls. */
 	private boolean enabled = false;
 	/**
 	 * 编码格式 ，默认： UTF-8
@@ -59,10 +41,5 @@ public class FastxlsProperties {
 	 * 临时目录
 	 */
 	private String tempdir = SystemUtils.getUserDir().getAbsolutePath();
-	
-	/**
-	 * 用于导入导出的类包支持 POI或者JXL，默认： POI
-	 */
-	private Support support = Support.POI;
 	
 }

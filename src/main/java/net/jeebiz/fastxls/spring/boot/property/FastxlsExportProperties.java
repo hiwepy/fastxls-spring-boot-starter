@@ -13,7 +13,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.github.vindell.fastxls.spring.boot.property;
+package net.jeebiz.fastxls.spring.boot.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
@@ -58,10 +58,5 @@ public class FastxlsExportProperties {
 	 * 导出xls文件时,每个Sheet最大允许有多少行，超过工作簿最大65536时候则以65536为最大值
 	 */
 	private int rowLimit = 10000;
-	
-	/**
-	 * 导出xls文件时,数据过多时候采用拆分方式sheet:多个工作簿|wookbook：多个xls文件，默认：sheet 即 拆分为多个工作簿
-	 */
-	private Destruct destruct = Destruct.SHEET;
 	
 }

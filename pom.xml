@@ -371,7 +371,78 @@
         <maven-resources-plugin.version>3.1.0</maven-resources-plugin.version>
         <maven-surefire-plugin.vertsion>2.22.1</maven-surefire-plugin.vertsion>
 		<maven-nexus-staging-plugin.version>1.6.8</maven-nexus-staging-plugin.version>
+		<fastxls.version>1.0.0-SNAPSHOT</fastxls.version>
 	</properties> 
+	
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-core</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-jexcel</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-poi</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-template-beetl</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-template-freemarker</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-template-httl</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-template-jetbrick</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-template-jxls1</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-template-jxls2</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-template-rythm</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-template-thymeleaf</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-template-velocity</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>net.jeebiz</groupId>
+				<artifactId>fastxls-template-webit</artifactId>
+				<version>${fastxls.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 	<dependencies>
 	
@@ -423,29 +494,22 @@
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
+		
 		<!-- Compile dependencies -->
-		<dependency>
-			<groupId>com.github.vindell</groupId>
-			<artifactId>spring-boot-starter-poi</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
-        <!-- https://mvnrepository.com/artifact/net.sourceforge.jexcelapi/jxl -->
-		<dependency>
-		    <groupId>net.sourceforge.jexcelapi</groupId>
-		    <artifactId>jxl</artifactId>
-		    <version>2.6.10</version>
-		</dependency>
 		
 		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
+			<groupId>net.jeebiz</groupId>
+			<artifactId>fastxls-core</artifactId>
 		</dependency>
-						  			
-		<!-- https://mvnrepository.com/artifact/org.jamel.dbf/dbf-reader -->
 		<dependency>
-		    <groupId>org.jamel.dbf</groupId>
-		    <artifactId>dbf-reader</artifactId>
-		    <version>0.3.0</version>
+			<groupId>net.jeebiz</groupId>
+			<artifactId>fastxls-jexcel</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.jeebiz</groupId>
+			<artifactId>fastxls-poi</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		      
 	</dependencies>

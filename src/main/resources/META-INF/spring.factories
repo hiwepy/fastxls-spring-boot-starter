@@ -1,3 +1,5 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.apache.shiro.spring.boot.ShiroCsrfguardAutoConfiguration
+net.jeebiz.fastxls.spring.boot.FastxlsAutoConfiguration,\
+net.jeebiz.fastxls.spring.boot.FastxlsJXLAutoConfiguration,\
+net.jeebiz.fastxls.spring.boot.FastxlsPOIAutoConfiguration

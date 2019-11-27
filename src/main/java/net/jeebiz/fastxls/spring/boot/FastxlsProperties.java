@@ -28,7 +28,7 @@ import lombok.ToString;
 @ToString
 public class FastxlsProperties {
 
-	public static final String PREFIX = "spring.fastxls";
+	public static final String PREFIX = "fastxls";
   
 	/** Whether Enable Fastxls. */
 	private boolean enabled = false;

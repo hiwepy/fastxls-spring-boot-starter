@@ -28,7 +28,7 @@ import lombok.ToString;
 @ToString
 public class FastxlsPOIProperties {
 
-	public static final String PREFIX = "spring.fastxls.poi";
+	public static final String PREFIX = "fastxls.poi";
 	
 	/** Whether Enable Imexport. */
 	private boolean enabled = false;

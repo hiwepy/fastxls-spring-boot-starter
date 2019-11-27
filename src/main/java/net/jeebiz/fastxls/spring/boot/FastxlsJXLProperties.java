@@ -32,7 +32,7 @@ import lombok.ToString;
 @ToString
 public class FastxlsJXLProperties {
 
-	public static final String PREFIX = "spring.fastxls.jxl";
+	public static final String PREFIX = "fastxls.jxl";
 
 	/**
 	 * Accessor to set the suppress warnings flag. Due to the change in logging in

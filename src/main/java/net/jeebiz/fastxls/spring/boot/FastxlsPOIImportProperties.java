@@ -20,20 +20,14 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import net.jeebiz.fastxls.core.property.ImportProperties;
 
-@ConfigurationProperties(FastxlsPOIProperties.PREFIX)
+@ConfigurationProperties(FastxlsPOIImportProperties.PREFIX)
 @Getter
 @Setter
 @ToString
-public class FastxlsPOIProperties {
-	
-	public static final String PREFIX = "fastxls.poi";
-	
-	/** Whether Enable Imexport. */
-	private boolean enabled = false;
-	/**
-	 * 编码格式 ，默认： UTF-8
-	 */
-	private String encoding = "UTF-8";
-	
+public class FastxlsPOIImportProperties extends ImportProperties {
+
+	public static final String PREFIX = "fastxls.poi.import";
+
 }

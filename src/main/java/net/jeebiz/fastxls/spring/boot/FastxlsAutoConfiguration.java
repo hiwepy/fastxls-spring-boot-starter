@@ -26,7 +26,5 @@ public class FastxlsAutoConfiguration {
 			@Autowired(required = false) NestedMessageSource messageSource) {
 		return new DefaultValidationMessageProvider(messageSource);
 	}
-	
-	
 
 }

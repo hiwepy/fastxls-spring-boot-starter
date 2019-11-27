@@ -29,24 +29,6 @@ import lombok.ToString;
 public class FastxlsPOIProperties {
 
 	public static final String PREFIX = "spring.fastxls.poi";
-  
-	/**
-	  * 组件支持的实现方式 POI 或者 JXL 
-	  */
-	public enum Support {
-
-		POI {
-			public String toString() {
-				return "poi";
-			}
-		},
-		JXL{
-			public String toString() {
-				return "jxl";
-			}
-		}
-		
-	}
 	
 	/** Whether Enable Imexport. */
 	private boolean enabled = false;
@@ -59,10 +41,5 @@ public class FastxlsPOIProperties {
 	 * 临时目录
 	 */
 	private String tempdir = SystemUtils.getUserDir().getAbsolutePath();
-	
-	/**
-	 * 用于导入导出的类包支持 POI或者JXL，默认： POI
-	 */
-	private Support support = Support.POI;
 	
 }

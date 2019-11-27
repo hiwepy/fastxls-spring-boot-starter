@@ -172,7 +172,7 @@ public class FastxlsJXLProperties {
 	/**
 	 * A hash map of function names keyed on locale
 	 */
-	private HashMap localeFunctionNames;
+	private HashMap<String, String> localeFunctionNames;
 
 	/**
 	 * Flag to indicate whether all external data and pivot stuff should refreshed

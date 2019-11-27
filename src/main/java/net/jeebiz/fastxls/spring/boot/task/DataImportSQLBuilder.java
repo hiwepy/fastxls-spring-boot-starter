@@ -4,18 +4,11 @@
  */
 package net.jeebiz.fastxls.spring.boot.task;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.apache.commons.collections4.MapUtils;
 import org.apache.commons.lang3.builder.Builder;
 import org.springframework.util.StringUtils;
-
-import net.jeebiz.fastxls.core.Cell;
-import net.jeebiz.fastxls.core.annotation.Row;
-import net.jeebiz.fastxls.core.provider.SQLTransformProvider;
-
 
 public class DataImportSQLBuilder implements Builder<String> {
 
@@ -31,10 +24,6 @@ public class DataImportSQLBuilder implements Builder<String> {
 	 * 数据列信息,当数据导出的数据为CachedRowSet、List<Map<String,String>> 时，需要用到
 	 */
 	private List<Map<String, String>> cloumnList;
-	/**
-	 * 数据转换
-	 */
-	private SQLTransformProvider transformProvider;
 
 	public DataImportSQLBuilder tableName(String tableName){
 		this.tableName = tableName;
@@ -50,12 +39,6 @@ public class DataImportSQLBuilder implements Builder<String> {
 		this.cloumnList = cloumnList;
 		return this;
 	}
-	
-	public DataImportSQLBuilder transformProvider(SQLTransformProvider transformProvider){
-		this.transformProvider = transformProvider;
-		return this;
-	}
-	
 	
 	private String getTransformContent(Map<String, String> values,String column_name){
 		String transform = values.get(column_name+"_transform");
@@ -206,10 +189,6 @@ public class DataImportSQLBuilder implements Builder<String> {
 
 	protected List<Map<String, String>> getCloumnList() {
 		return cloumnList;
-	}
-
-	protected SQLTransformProvider getTransformProvider() {
-		return transformProvider;
 	}
 
 }

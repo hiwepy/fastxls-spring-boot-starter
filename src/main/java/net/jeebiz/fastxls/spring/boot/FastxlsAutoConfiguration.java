@@ -9,15 +9,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import net.jeebiz.fastxls.core.provider.def.DefaultValidationMessageProvider;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsExportProperties;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsImportProperties;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsStoreProperties;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsValidationProperties;
 
 @Configuration
 @ConditionalOnProperty(prefix = FastxlsProperties.PREFIX, value = "enabled", havingValue = "true")
-@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsStoreProperties.class,
-		FastxlsImportProperties.class, FastxlsExportProperties.class, FastxlsValidationProperties.class })
+@EnableConfigurationProperties({ FastxlsProperties.class})
 public class FastxlsAutoConfiguration {
 
 	@Bean

@@ -13,17 +13,12 @@ import net.jeebiz.fastxls.poi.POIWorkbookFiller;
 import net.jeebiz.fastxls.poi.POIWorkbookMapper;
 import net.jeebiz.fastxls.poi.POIWorkbookReader;
 import net.jeebiz.fastxls.poi.POIWorkbookWriter;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsExportProperties;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsImportProperties;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsStoreProperties;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsValidationProperties;
 
 @Configuration
 @ConditionalOnProperty(prefix = FastxlsProperties.PREFIX, value = "enabled", havingValue = "true")
 @ConditionalOnClass({POIWorkbookConverter.class, POIWorkbookCopyer.class, POIWorkbookExtractor.class, 
 	POIWorkbookFiller.class, POIWorkbookMapper.class, POIWorkbookReader.class, POIWorkbookWriter.class})
-@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsStoreProperties.class,
-		FastxlsImportProperties.class, FastxlsExportProperties.class, FastxlsValidationProperties.class })
+@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsPOIProperties.class, FastxlsPOIExportProperties.class, FastxlsPOIImportProperties.class})
 public class FastxlsPOIAutoConfiguration {
 
 	@Bean

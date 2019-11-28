@@ -29,8 +29,6 @@ public class FastxlsPOIProperties {
 	
 	public static final String PREFIX = "fastxls.poi";
 	
-	/** Whether Enable Imexport. */
-	private boolean enabled = false;
 	/**
 	 * 编码格式 ，默认： UTF-8
 	 */

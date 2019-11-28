@@ -9,16 +9,11 @@ import org.springframework.context.annotation.Configuration;
 import net.jeebiz.fastxls.jexcel.JXLWorkbookFiller;
 import net.jeebiz.fastxls.jexcel.JXLWorkbookMapper;
 import net.jeebiz.fastxls.jexcel.JXLWorkbookReader;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsExportProperties;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsImportProperties;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsStoreProperties;
-import net.jeebiz.fastxls.spring.boot.property.FastxlsValidationProperties;
 
 @Configuration
 @ConditionalOnProperty(prefix = FastxlsProperties.PREFIX, value = "enabled", havingValue = "true")
 @ConditionalOnClass({JXLWorkbookFiller.class, JXLWorkbookMapper.class, JXLWorkbookReader.class})
-@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsStoreProperties.class,
-		FastxlsImportProperties.class, FastxlsExportProperties.class, FastxlsValidationProperties.class })
+@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsJXLProperties.class, FastxlsJXLExportProperties.class, FastxlsJXLImportProperties.class})
 public class FastxlsJXLAutoConfiguration  {
 	
 	@Bean

@@ -1,3 +1,7 @@
+/** 
+ * Copyright (C) 2018 Jeebiz (http://jeebiz.net).
+ * All Rights Reserved. 
+ */
 package net.jeebiz.fastxls.spring.boot;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;

@@ -18,7 +18,7 @@ import net.jeebiz.fastxls.poi.POIWorkbookWriter;
 @ConditionalOnProperty(prefix = FastxlsProperties.PREFIX, value = "enabled", havingValue = "true")
 @ConditionalOnClass({POIWorkbookConverter.class, POIWorkbookCopyer.class, POIWorkbookExtractor.class, 
 	POIWorkbookFiller.class, POIWorkbookMapper.class, POIWorkbookReader.class, POIWorkbookWriter.class})
-@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsPOIProperties.class, FastxlsPOIExportProperties.class, FastxlsPOIImportProperties.class})
+@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsExportProperties.class, FastxlsImportProperties.class, FastxlsPOIProperties.class})
 public class FastxlsPOIAutoConfiguration {
 
 	@Bean

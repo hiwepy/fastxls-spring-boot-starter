@@ -12,7 +12,7 @@ import net.jeebiz.fastxls.core.provider.def.DefaultValidationMessageProvider;
 
 @Configuration
 @ConditionalOnProperty(prefix = FastxlsProperties.PREFIX, value = "enabled", havingValue = "true")
-@EnableConfigurationProperties({ FastxlsProperties.class})
+@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsExportProperties.class, FastxlsImportProperties.class})
 public class FastxlsAutoConfiguration {
 
 	@Bean

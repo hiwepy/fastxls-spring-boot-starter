@@ -13,7 +13,7 @@ import net.jeebiz.fastxls.jexcel.JXLWorkbookReader;
 @Configuration
 @ConditionalOnProperty(prefix = FastxlsProperties.PREFIX, value = "enabled", havingValue = "true")
 @ConditionalOnClass({JXLWorkbookFiller.class, JXLWorkbookMapper.class, JXLWorkbookReader.class})
-@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsJXLProperties.class, FastxlsJXLExportProperties.class, FastxlsJXLImportProperties.class})
+@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsExportProperties.class, FastxlsImportProperties.class, FastxlsJXLProperties.class})
 public class FastxlsJXLAutoConfiguration  {
 	
 	@Bean

@@ -22,12 +22,12 @@ import lombok.Setter;
 import lombok.ToString;
 import net.jeebiz.fastxls.core.property.ExportProperties;
 
-@ConfigurationProperties(FastxlsPOIExportProperties.PREFIX)
+@ConfigurationProperties(FastxlsExportProperties.PREFIX)
 @Getter
 @Setter
 @ToString
-public class FastxlsPOIExportProperties extends ExportProperties {
+public class FastxlsExportProperties extends ExportProperties {
 
-	public static final String PREFIX = "fastxls.poi.export";
+	public static final String PREFIX = "fastxls.export";
 
 }

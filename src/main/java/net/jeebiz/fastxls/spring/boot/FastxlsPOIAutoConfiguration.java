@@ -5,7 +5,6 @@
 package net.jeebiz.fastxls.spring.boot;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,10 +18,9 @@ import net.jeebiz.fastxls.poi.POIWorkbookReader;
 import net.jeebiz.fastxls.poi.POIWorkbookWriter;
 
 @Configuration
-@ConditionalOnProperty(prefix = FastxlsProperties.PREFIX, value = "enabled", havingValue = "true")
 @ConditionalOnClass({POIWorkbookConverter.class, POIWorkbookCopyer.class, POIWorkbookExtractor.class, 
 	POIWorkbookFiller.class, POIWorkbookMapper.class, POIWorkbookReader.class, POIWorkbookWriter.class})
-@EnableConfigurationProperties({ FastxlsProperties.class, FastxlsExportProperties.class, FastxlsImportProperties.class, FastxlsPOIProperties.class})
+@EnableConfigurationProperties({ FastxlsExportProperties.class, FastxlsImportProperties.class, FastxlsPOIProperties.class})
 public class FastxlsPOIAutoConfiguration {
 
 	@Bean

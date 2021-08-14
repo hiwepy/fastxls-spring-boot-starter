@@ -9,13 +9,13 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import net.jeebiz.fastxls.poi.POIWorkbookConverter;
-import net.jeebiz.fastxls.poi.POIWorkbookCopyer;
-import net.jeebiz.fastxls.poi.POIWorkbookExtractor;
-import net.jeebiz.fastxls.poi.POIWorkbookFiller;
-import net.jeebiz.fastxls.poi.POIWorkbookMapper;
-import net.jeebiz.fastxls.poi.POIWorkbookReader;
-import net.jeebiz.fastxls.poi.POIWorkbookWriter;
+import com.github.hiwepy.fastxls.poi.POIWorkbookConverter;
+import com.github.hiwepy.fastxls.poi.POIWorkbookCopyer;
+import com.github.hiwepy.fastxls.poi.POIWorkbookExtractor;
+import com.github.hiwepy.fastxls.poi.POIWorkbookFiller;
+import com.github.hiwepy.fastxls.poi.POIWorkbookMapper;
+import com.github.hiwepy.fastxls.poi.POIWorkbookReader;
+import com.github.hiwepy.fastxls.poi.POIWorkbookWriter;
 
 @Configuration
 @ConditionalOnClass({POIWorkbookConverter.class, POIWorkbookCopyer.class, POIWorkbookExtractor.class, 

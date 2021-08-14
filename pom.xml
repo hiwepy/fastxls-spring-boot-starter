@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	
-	<groupId>net.jeebiz</groupId>
+	<groupId>com.github.hiwepy</groupId>
 	<artifactId>fastxls-spring-boot-starter</artifactId>
 	<description>Spring Boot Starter For Fastxls</description>
 	<version>1.0.0-SNAPSHOT</version>
@@ -65,7 +65,6 @@
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>${maven-compiler-plugin.version}</version>
 					<configuration>
-						<defaultLibBundleDir>lib</defaultLibBundleDir>
 						<source>${java.version}</source>
 						<target>${java.version}</target>
 						<encoding>${project.build.sourceEncoding}</encoding>
@@ -145,11 +144,6 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-source-plugin</artifactId>
 					<version>${maven-source-plugin.version}</version>
-					<configuration>
-						<testFailureIgnore>true</testFailureIgnore>
-						<attach>true</attach>
-						<encoding>${project.build.sourceEncoding}</encoding>
-					</configuration>
 					<executions>
 						<execution>
 							<id>attach-sources</id>
@@ -190,7 +184,6 @@
 					<artifactId>maven-jar-plugin</artifactId>
 					<version>${maven-jar-plugin.version}</version>
 					<configuration>
-						<encoding>${project.build.sourceEncoding}</encoding>
 						<skipIfEmpty>true</skipIfEmpty>
 						<archive>
 							<manifest>
@@ -206,8 +199,6 @@
 					<artifactId>maven-javadoc-plugin</artifactId>
 					<version>${maven-javadoc-plugin.version}</version>
 					<configuration>
-						<aggregate>true</aggregate>
-						<argLine>-Dfile.encoding=UTF-8</argLine>
 						<charset>${project.build.sourceEncoding}</charset>
 						<encoding>${project.build.sourceEncoding}</encoding>
 						<docencoding>${project.build.sourceEncoding}</docencoding>
@@ -378,67 +369,67 @@
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-core</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-jexcel</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-poi</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-template-beetl</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-template-freemarker</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-template-httl</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-template-jetbrick</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-template-jxls1</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-template-jxls2</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-template-rythm</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-template-thymeleaf</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-template-velocity</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>net.jeebiz</groupId>
+				<groupId>com.github.hiwepy</groupId>
 				<artifactId>fastxls-template-webit</artifactId>
 				<version>${fastxls.version}</version>
 			</dependency>
@@ -505,16 +496,16 @@
 		<!-- Compile dependencies -->
 		
 		<dependency>
-			<groupId>net.jeebiz</groupId>
+			<groupId>com.github.hiwepy</groupId>
 			<artifactId>fastxls-core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>net.jeebiz</groupId>
+			<groupId>com.github.hiwepy</groupId>
 			<artifactId>fastxls-jexcel</artifactId>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>net.jeebiz</groupId>
+			<groupId>com.github.hiwepy</groupId>
 			<artifactId>fastxls-poi</artifactId>
 			<scope>provided</scope>
 		</dependency>

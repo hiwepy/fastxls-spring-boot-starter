@@ -6,10 +6,11 @@ package net.jeebiz.fastxls.spring.boot;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import com.github.hiwepy.fastxls.core.property.ImportProperties;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import net.jeebiz.fastxls.core.property.ImportProperties;
 
 @ConfigurationProperties(FastxlsImportProperties.PREFIX)
 @Getter

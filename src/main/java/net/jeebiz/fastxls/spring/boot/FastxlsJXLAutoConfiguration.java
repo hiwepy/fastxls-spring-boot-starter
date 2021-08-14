@@ -9,9 +9,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import net.jeebiz.fastxls.jexcel.JXLWorkbookFiller;
-import net.jeebiz.fastxls.jexcel.JXLWorkbookMapper;
-import net.jeebiz.fastxls.jexcel.JXLWorkbookReader;
+import com.github.hiwepy.fastxls.jexcel.JXLWorkbookFiller;
+import com.github.hiwepy.fastxls.jexcel.JXLWorkbookMapper;
+import com.github.hiwepy.fastxls.jexcel.JXLWorkbookReader;
 
 @Configuration
 @ConditionalOnClass({JXLWorkbookFiller.class, JXLWorkbookMapper.class, JXLWorkbookReader.class})

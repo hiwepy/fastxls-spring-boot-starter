@@ -7,10 +7,11 @@ package net.jeebiz.fastxls.spring.boot;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
+import com.github.hiwepy.fastxls.core.property.ExportProperties;
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import net.jeebiz.fastxls.core.property.ExportProperties;
 
 @ConfigurationProperties(FastxlsExportProperties.PREFIX)
 @Getter

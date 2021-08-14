@@ -12,7 +12,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import net.jeebiz.fastxls.core.provider.def.DefaultValidationMessageProvider;
+import com.github.hiwepy.fastxls.core.provider.def.DefaultValidationMessageProvider;
 
 @Configuration
 @ConditionalOnClass({DefaultValidationMessageProvider.class})

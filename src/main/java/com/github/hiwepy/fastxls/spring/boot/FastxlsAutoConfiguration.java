@@ -2,7 +2,7 @@
  * Copyright (C) 2018 Jeebiz (http://jeebiz.net).
  * All Rights Reserved. 
  */
-package net.jeebiz.fastxls.spring.boot;
+package com.github.hiwepy.fastxls.spring.boot;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.biz.context.NestedMessageSource;

@@ -1,5 +1,5 @@
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-net.jeebiz.fastxls.spring.boot.FastxlsAutoConfiguration,\
-net.jeebiz.fastxls.spring.boot.FastxlsJXLAutoConfiguration,\
-net.jeebiz.fastxls.spring.boot.FastxlsPOIAutoConfiguration
+com.github.hiwepy.fastxls.spring.boot.FastxlsAutoConfiguration,\
+com.github.hiwepy.fastxls.spring.boot.FastxlsJXLAutoConfiguration,\
+com.github.hiwepy.fastxls.spring.boot.FastxlsPOIAutoConfiguration

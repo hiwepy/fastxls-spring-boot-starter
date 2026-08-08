@@ -14,11 +14,27 @@ import org.springframework.context.annotation.Configuration;
 
 import io.github.easy4j.fastxls.core.provider.def.DefaultValidationMessageProvider;
 
+/**
+ * Spring Boot auto-configuration for the Fastxls core module.
+ * <p>Activates when {@link DefaultValidationMessageProvider} is on the classpath and
+ * registers the default validation message provider bean used to resolve
+ * cell-level validation messages during spreadsheet import and export.</p>
+ *
+ * @author <a href="https://github.com/loong10k">@Loong Wan</a>
+ * @since 1.0.0
+ */
 @Configuration
 @ConditionalOnClass({DefaultValidationMessageProvider.class})
 @EnableConfigurationProperties({ FastxlsExportProperties.class, FastxlsImportProperties.class})
 public class FastxlsAutoConfiguration {
 
+	/**
+	 * Creates the default validation message provider used to resolve
+	 * cell-level validation messages when exporting or importing spreadsheets.
+	 * @param messageSource optional nested message source used for i18n
+	 * resolution, may be {@code null} when no source is configured
+	 * @return the default validation message provider bean
+	 */
 	@Bean
 	@ConditionalOnMissingBean
 	public DefaultValidationMessageProvider validationMessageProvider(

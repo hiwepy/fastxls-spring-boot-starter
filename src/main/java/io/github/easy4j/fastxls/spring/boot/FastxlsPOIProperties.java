@@ -11,20 +11,26 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+/**
+ * Configuration properties for the Fastxls Apache POI integration, bound under the
+ * {@value #PREFIX} prefix.
+ * <p>Holds environment-specific options such as the default encoding and the temporary
+ * directory used by POI when processing workbooks.</p>
+ *
+ * @author <a href="https://github.com/loong10k">@Loong Wan</a>
+ * @since 1.0.0
+ */
 @ConfigurationProperties(FastxlsPOIProperties.PREFIX)
 @Getter
 @Setter
 @ToString
 public class FastxlsPOIProperties {
-	
+
+	/** Configuration property prefix for Fastxls POI options. */
 	public static final String PREFIX = "fastxls.poi";
-	/**
-	 * 编码格式 ，默认： UTF-8
-	 */
+	/** Default character encoding used when reading or writing workbooks. */
 	private String encoding = "UTF-8";
-	/**
-	 * 临时目录
-	 */
+	/** Temporary directory used by Apache POI for intermediate workbook files. */
 	private String tempdir = SystemUtils.getUserDir().getAbsolutePath();
-	
+
 }

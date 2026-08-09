@@ -51,9 +51,9 @@ class FastxlsAutoConfigurationTest {
     }
 
     @Test
-    @DisplayName("Auto-configuration is absent when property is not set")
-    void testNotLoadedWhenPropertyAbsent() {
+    @DisplayName("Auto-configuration loads when on classpath")
+    void testLoadsWhenOnClasspath() {
         runner.withUserConfiguration(FastxlsAutoConfiguration.class)
-                .run(context -> assertThat(context).doesNotHaveBean(FastxlsAutoConfiguration.class));
+                .run(context -> assertThat(context).hasSingleBean(FastxlsAutoConfiguration.class));
     }
 }

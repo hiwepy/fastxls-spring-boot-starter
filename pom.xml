@@ -651,23 +651,6 @@
 
         
 
-        <!-- Source: https://github.com/easy-4-java/fastxls-core — easy4j fastxls-core -->
-        <dependency>
-            <groupId>io.github.easy4j</groupId>
-            <artifactId>fastxls-core</artifactId>
-        </dependency>
-        <!-- Source: https://github.com/easy-4-java/fastxls-jexcel — easy4j fastxls-jexcel -->
-        <dependency>
-            <groupId>io.github.easy4j</groupId>
-            <artifactId>fastxls-jexcel</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <!-- Source: https://github.com/easy-4-java/fastxls-poi — easy4j fastxls-poi -->
-        <dependency>
-            <groupId>io.github.easy4j</groupId>
-            <artifactId>fastxls-poi</artifactId>
-            <scope>provided</scope>
-        </dependency>
           <!-- Source: https://github.com/easy-4-java/spring-enhance — easy4j spring-biz -->
           <dependency>
             <groupId>io.github.easy4j</groupId>

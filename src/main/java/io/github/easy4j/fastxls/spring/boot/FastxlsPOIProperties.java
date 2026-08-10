@@ -17,7 +17,7 @@ import lombok.ToString;
  * <p>Holds environment-specific options such as the default encoding and the temporary
  * directory used by POI when processing workbooks.</p>
  *
- * @author <a href="https://github.com/loong10k">@Loong Wan</a>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 @ConfigurationProperties(FastxlsPOIProperties.PREFIX)

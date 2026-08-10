@@ -18,7 +18,7 @@ import io.github.easy4j.fastxls.jexcel.JXLWorkbookReader;
  * <p>Activates when the JXL workbook filler, mapper and reader classes are present on
  * the classpath and registers the corresponding JXL workbook beans.</p>
  *
- * @author <a href="https://github.com/loong10k">@Loong Wan</a>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 @Configuration

@@ -18,7 +18,7 @@ import lombok.ToString;
  * <p>Extends the core {@link ImportProperties} to allow the import behaviour to be
  * customised through Spring Boot externalised configuration.</p>
  *
- * @author <a href="https://github.com/loong10k">@Loong Wan</a>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 @ConfigurationProperties(FastxlsImportProperties.PREFIX)

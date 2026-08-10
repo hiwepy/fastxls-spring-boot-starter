@@ -20,7 +20,7 @@ import io.github.easy4j.fastxls.core.provider.def.DefaultValidationMessageProvid
  * registers the default validation message provider bean used to resolve
  * cell-level validation messages during spreadsheet import and export.</p>
  *
- * @author <a href="https://github.com/loong10k">@Loong Wan</a>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 @Configuration

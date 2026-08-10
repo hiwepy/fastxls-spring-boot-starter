@@ -23,7 +23,7 @@ import io.github.easy4j.fastxls.poi.POIWorkbookWriter;
  * the full set of POI workbook components (converter, copyer, extractor, filler, mapper,
  * reader and writer).</p>
  *
- * @author <a href="https://github.com/loong10k">@Loong Wan</a>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
  * @since 1.0.0
  */
 @Configuration

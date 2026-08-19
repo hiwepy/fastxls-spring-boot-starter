@@ -19,6 +19,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+/**
+ * <p>Auto-configuration for ExportProperties.</p>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class ExportProperties implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -26,6 +26,11 @@ import io.github.easy4j.fastxls.core.provider.def.DefaultValidationMessageProvid
 @Configuration
 @ConditionalOnClass({DefaultValidationMessageProvider.class})
 @EnableConfigurationProperties({ FastxlsExportProperties.class, FastxlsImportProperties.class})
+/**
+ * <p>Auto-configuration for FastxlsAutoConfiguration.</p>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class FastxlsAutoConfiguration {
 
 	/**

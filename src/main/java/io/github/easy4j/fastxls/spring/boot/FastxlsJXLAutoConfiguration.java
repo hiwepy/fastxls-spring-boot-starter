@@ -24,6 +24,11 @@ import io.github.easy4j.fastxls.jexcel.JXLWorkbookReader;
 @Configuration
 @ConditionalOnClass({JXLWorkbookFiller.class, JXLWorkbookMapper.class, JXLWorkbookReader.class})
 @EnableConfigurationProperties({ FastxlsExportProperties.class, FastxlsImportProperties.class, FastxlsJXLProperties.class})
+/**
+ * <p>Auto-configuration for FastxlsJXLAutoConfiguration.</p>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class FastxlsJXLAutoConfiguration  {
 
 	/**
@@ -31,6 +36,10 @@ public class FastxlsJXLAutoConfiguration  {
 	 * @return the JXL workbook filler bean
 	 */
 	@Bean
+	/**
+	 * <p>Jxl workbook filler.</p>
+	 * @return the result
+	 */
 	public JXLWorkbookFiller jxlWorkbookFiller() {
 		return new JXLWorkbookFiller();
 	}
@@ -40,6 +49,10 @@ public class FastxlsJXLAutoConfiguration  {
 	 * @return the JXL workbook mapper bean
 	 */
 	@Bean
+	/**
+	 * <p>Jxl workbook mapper.</p>
+	 * @return the result
+	 */
 	public JXLWorkbookMapper jxlWorkbookMapper() {
 		return new JXLWorkbookMapper();
 	}
@@ -49,6 +62,10 @@ public class FastxlsJXLAutoConfiguration  {
 	 * @return the JXL workbook reader bean
 	 */
 	@Bean
+	/**
+	 * <p>Jxl workbook reader.</p>
+	 * @return the result
+	 */
 	public JXLWorkbookReader jxlWorkbookReader() {
 		return new JXLWorkbookReader();
 	}

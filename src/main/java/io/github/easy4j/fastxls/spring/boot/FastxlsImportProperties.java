@@ -25,6 +25,11 @@ import lombok.ToString;
 @Getter
 @Setter
 @ToString
+/**
+ * <p>Auto-configuration for FastxlsImportProperties.</p>
+ * @author <a href="https://github.com/loong10k">Loong Wan</a>
+ * @since 1.0.0
+ */
 public class FastxlsImportProperties extends ImportProperties {
 
 	/** Configuration property prefix for Fastxls import options. */
